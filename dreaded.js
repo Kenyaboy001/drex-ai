@@ -83,17 +83,15 @@ const antibot = process.env.ANTIBOT || 'FALSE';
     const author = process.env.STICKER_AUTHOR ||'𝐃𝐑𝐄𝐗_𝐀𝐈';
     const packname = process.env.STICKER_PACKNAME || 'Drex';
 const dev = process.env.DEV || '254102074064'
+
 const menu = process.env.MENU_TYPE || 'VIDEO';
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck';
     const autoread = process.env.AUTOREAD || 'TRUE';
     const badword = bad.split(",");
-    const thum = fs.readFileSync ('./𝐃𝐑𝐄𝐗_𝐀𝐈.jpg');	  
-    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender);
-    const viewOnceMessage = args.join(" ");
-    const fcontact = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { 'contactMessage': { 'displayName': `𝐃𝐑𝐄𝐗 𝐁𝐎𝐓`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;DrexBot,;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': { url: 'https://telegra.ph/file/00c44dbca471eff754425.png' }}}}
-       // Group
+    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
+    // Group
     const groupMetadata = m.isGroup ? await client.groupMetadata(m.chat).catch((e) => {}) : "";
     const groupName = m.isGroup ? groupMetadata.subject : "";
     const participants = m.isGroup ? await groupMetadata.participants : ""; 
@@ -193,7 +191,7 @@ function _0x11cc() {
         '184473FwtnYZ',
         '18szWhmE',
         'startsWith',
-        '𝐃𝐑𝐄𝐗 𝐁𝐎𝐓\x20an',
+        '𝐃𝐑𝐄𝐗_𝐀𝐈\x20an',
         '376590puyzhN',
         'key'
     ];
@@ -229,24 +227,8 @@ if (budy.startsWith('>')) {
    } catch (err) { 
  await reply(String(err)); 
    } 
-}
+ } 
 
-	   async function loady () {
-var lod = [
-"i am drex_ai",
-"cloned by drex mose",
-"follow the below steps to deploy me",
-"Contact owner after deploying",
-	"𝐓𝐡𝐚𝐧𝐤 𝐘𝐨𝐮 𝐅𝐨𝐫 𝐖𝐚𝐢𝐭𝐢𝐧𝐠 😁 "
-]
-let { key } = await client.sendMessage(from, {text: '𝐈 𝐚𝐦 𝐃𝐫𝐞𝐱_𝐚𝐢'})
-
-for (let i = 0; i < lod.length; i++) {
-await client.sendMessage(from, {text: lod[i], edit: key });
-}
-}	 
-	
-	  
 	   async function load () {
 var lod = [
 "i am drex_ai",
@@ -270,7 +252,6 @@ var lod = [
 	"✞",
         "⭓𝐏𝐨𝐧𝐠",	
 	"𝙿𝙸𝙽𝙶𝙸𝙽𝙶 ◍ ◉ ⭗ "
-	
 ]
 let { key } = await client.sendMessage(from, {text: '⭓𝐏𝐨𝐧𝐠'})
 
@@ -527,14 +508,6 @@ let cap = `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣
 │╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅⏣
 ╰══════════════════⊷⏣
 
-╭════✘⭓𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧⭓✘════⊷⏣
-▯╭┄┄┄┄┄┄┄┄┄┄┄···◕
-┃⭓│${prefix}𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥.
-┃⭓│${prefix}𝐃𝐞𝐩𝐥𝐨𝐲.
-┬⛥│
-│╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅⏣
-╰══════════════════⊷⏣
-
 ╭════✘⭓𝗚𝗥𝗢𝗨𝗣⭓✘════⊷⏣
 ▯╭┄┄┄┄┄┄┄┄┄┄┄···◕
 ┃⭓│${prefix}𝐏𝐫𝐨𝐦𝐨𝐭𝐞.
@@ -548,7 +521,7 @@ let cap = `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣
 ┃⭓│${prefix}𝐃𝐢𝐬𝐩-𝐨𝐟𝐟.
 ┃⭓│${prefix}𝐃𝐢𝐬𝐩-7.
 ┃⭓│${prefix}𝐃𝐢𝐬𝐩-90.
-┃⭓│${prefix}𝐈𝐜𝐨𝐧.
+┃⭓│${prefix}𝐈𝐜𝐨𝐦.
 ┃⭓│${prefix}𝐒𝐮𝐛𝐣𝐞𝐜𝐭.
 ┃⭓│${prefix}𝐃𝐞𝐬𝐜.
 ┃⭓│${prefix}𝐋𝐞𝐚𝐯𝐞.
@@ -557,7 +530,7 @@ let cap = `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣
 ┃⭓│${prefix}𝐑𝐞𝐯𝐨𝐤𝐞.
 ┃⭓│
 ┃⭓╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅⏣
-┃➠    ▒▓𝐌𝐚𝐝𝐞 𝐁𝐲 ✞⃟❐͜͡𝕯Я𝚺✘ ⃟ۣቾ ᭄ ࣩࣧࣧ▓▒ 
+┃➠    ▒▓𝐌𝐚𝐝𝐞 𝐁𝐲 ꪶ ࣩࣩࣩࣩ᪵᪵᪵᪵᪵᪵᪵᪵ࣧࣧ𝐝𝐫𝐞𝐱ꪶ ࣩࣧࣧ▓▒ 
 ╰════════════════⊷⏣`;
 
 if (menu === 'VIDEO') {
@@ -567,13 +540,13 @@ if (menu === 'VIDEO') {
                         caption: cap,
                         gifPlayback: true
                     }, {
-                        quoted: fcontact
+                        quoted: m
                     })
-} else if (menu === 'TEXT') {
-client.sendMessage(from, { text: cap}, {quoted: fcontact})
+                } else if (menu === 'TEXT') {
+client.sendMessage(from, { text: cap}, {quoted: m})
 
 } else if (menu === 'IMAGE') {
-client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/53077a0e00d6bda32a46b.jpg' }, caption: cap, fileLength: "9999999999"}, { quoted: fcontact })
+client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/53077a0e00d6bda32a46b.jpg' }, caption: cap, fileLength: "9999999999"}, { quoted: m })
 } else if (menu === 'LINK') {
 client.sendMessage(m.chat, {
                         text: cap,
@@ -596,19 +569,6 @@ client.sendMessage(m.chat, {
           // Group Commands
 break;
 
-        case 'tagadmins': case 'admins': {
-        if (!m.isGroup) return reply(mess.grouponly);
-        client.sendMessage(from, { react: { text: "🗿", key: m.key } })
-        if (!text) return reply(`*Please quote or write a meaningful message to tag admins to*`)
-        let teks = `*「 Tag Admins 」*
-
-*Message : ${text}*\n\n`
-        for (let mem of groupAdmins) {
-          teks += `🍁 @${mem.split('@')[0]}\n`
-        }
-        client.sendMessage(m.chat, { text: teks, mentions: groupAdmins }, { quoted: fcontact })
-      }
-        break;
 
 case "advice":
 reply(advice());
@@ -616,153 +576,23 @@ console.log(advice());
 
 break;
 
-case "p": case "t": {
-	await loadings ()
-for (let i = 0; i < 5; i++) {
-  m.reply(`⭓𝐏𝐨𝐧𝐠\n *${dreadedspeed.toFixed(4)}* 𝐌𝐬`);
-  }
-} 
-break;
-		      
-
-	     case 'add': {
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmin) return reply(mess.botadmin);
-        if (!Owner) return reply(mess.botowner)
-        client.sendMessage(from, { react: { text: "🫡", key: m.key } })
-
-
-        let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-        if (users.length == 0) return reply(`Please write the number of the person you want to add to this group`)
-        await client.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(`User Added Successfully!`)).catch((err) => reply(`Cannot add that user to this group!`))
-      }
-        break;
-
-	     case 'attps':
-                if (!q) return reply('Where Is The Text');
-                
-                client.sendMessage(m.chat, { sticker: { url: `https://api.lolhuman.xyz/api/attp?apikey=cde5404984da80591a2692b6&text=${q}`} }, { quoted: m })
-                break;
-
-	 case "take": {
-try {
- if (!m.quoted) return reply('Quote a sticker!')
- let senderName = await client.getName(sender);
- 
- if (!/webp/.test(mime)) throw `Tag sticker with caption ${prefix + command}`;
- if (m.quoted.isAnimated === true) {
- client.downloadAndSaveMediaMessage(quoted, "gifee");
- client.sendMessage(m.chat, {sticker:fs.readFileSync("gifee.webp")},{quoted:m});
- } else if (/image/.test(mime)) {
- let media = await quoted.download();
- let encmedia = await client.sendImageAsSticker(m.chat, media, m, { packname: senderName, author: senderName });
- await fs.unlinkSync(encmedia);
-} else if (/video/.test(mime)) {
- if ((quoted.msg || quoted).seconds > 11) return m.reply('Not longer than 10 seconds!');
- let mediax = await quoted.download();
- let encmediax = await client.sendVideoAsSticker(m.chat, mediax, m, { packname: senderName, author: senderName });
- await fs.unlinkSync(encmediax)
- } else {
- reply(`Send a sticker with caption ${prefix + command}`);
- }
-
-} catch (error) { 
- await reply("Oops😬\nFailed🗿")}
-
- }
-break;
-
- case 'vv': {
- if (!viewOnceMessage) {
- reply('Please provide a view once message to extract media from.')
- return;
- }
- try {
- const { media } = await extractMediaFromViewOnce(viewOnceMessage);
- if (!media) {
- reply('No media found in the view once message.')
- return;
- }
- let mediaType = media.type;
- let fileName = media.fileName || `media.${mediaType}`;
- let data = media.data;
- let mimeType = media.mimeType;
- //sendMedia(from, data, mediaType, fileName, { mimetype: mimeType, caption: 'Media extracted from view once message.' })
- await client.sendMessage(
- from, {
- [mediaType]: data,
- mimetype: mimeType,
- fileName: fileName,
- caption: 'Media extracted from view once message.'
- }, {
- quoted: m
- }
- );
- } catch (error) {
- reply('Error extracting media from view once message.')
- }
- }
-break;
-		      
-case 'play2': {
-  if (!text) {
-    reply('𝐏𝐫𝐨𝐯𝐢𝐝𝐞 𝐚 𝐬𝐞𝐚𝐫𝐜𝐡 𝐭𝐞𝐫𝐦!\n𝐄.𝐠: 𝙿𝚕𝚊𝚢 𝚂𝚑𝚞𝚜𝚑𝚊 𝙽𝚢𝚊𝚟𝚞 𝚋𝚢 𝙲𝚑𝚛𝚒𝚜𝚝𝚒𝚗𝚊 𝚂𝚞𝚜𝚑𝚘')
-    return;
-  }
-  try {
-    reply('𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐚𝐮𝐝𝐢𝐨...')
-    const { videos } = await yts(text);
-    if (!videos || videos.length <= 0) {
-      reply(`No Matching videos found for : *${args[0]}*!!`)
-      return;
-    }
-    let urlYt = videos[0].url
-    let infoYt = await ytdl.getInfo(urlYt);
-    //30 MIN
-    if (infoYt.videoDetails.lengthSeconds >= 1800) {
-      reply(`Too big!\I'm Unable to download big files. 🤥`);
-      return;
-    }
-    const getRandonm = (ext) => {
-      return `${Math.floor(Math.random() * 10000)}${ext}`;
-    };
-    let titleYt = infoYt.videoDetails.title;
-    let randomName = getRandonm(".mp3");
-    const stream = ytdl(urlYt, {
-      filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
-    })
-      .pipe(fs.createWriteStream(`./${randomName}`));
-    console.log("Audio downloading ->", urlYt);
-    // reply("Downloading.. This may take up to 5 min!");
-    await new Promise((resolve, reject) => {
-      stream.on("error", reject);
-      stream.on("finish", resolve);
-    });
-
-    let stats = fs.statSync(`./${randomName}`);
-    let fileSizeInBytes = stats.size;
-    // Convert the file size to megabytes (optional)
-    let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-    console.log("Audio downloaded ! \n Size: " + fileSizeInMegabytes);
-    if (fileSizeInMegabytes <= 40) {
-      await client.sendMessage(
-        from, {
-          audio: fs.readFileSync(`./${randomName}`),
-          mimetype: "audio/mpeg",
-          caption: "𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃 𝐁𝐘 𝐃𝐑𝐄𝐗"
-        }, {
-          quoted: fcontact
-        }
-      );
-    } else {
-      reply(`File size bigger.`);
-    }
-    fs.unlinkSync(`./${randomName}`);
-  } catch (e) {
-    reply(e.toString())
-  }
-}
-break;
+	      case 'takes': case 'swm': {
+                            
+                if (/image/.test(mime)) {
+                    await fs.unlinkSync(encmediax);                    
+	            await fs.unlinkSync(encmedia)
+		    let media = await client.downloadMediaMessage(qmsg)
+                    let encmediax = await client.sendImageAsSticker(m.chat, mediax, m, { packname: drex_mose, author: drex-ai });	
+                    } else if (/video/.test(mime)) {
+                    if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+                    let media = await client.downloadMediaMessage(qmsg)
+                    let encmedia = await client.sendVideoAsSticker(m.chat, media, m, { packname: drex_mose, author: drex-ai })
+                    await fs.unlinkSync(encmedia)
+                } else {
+                    return reply(`Quote a photo/Video with Caption ${prefix + command}\nduration of Video 1-9 seconds`)
+                }
+            }
+            break;
 
 	      case 'hd': case 'hdr': case 'remini': {
 			if (!quoted) return reply(`Where is the picture?`)
@@ -771,7 +601,7 @@ break;
 			const { remini } = require('./lib/remini')
 			let media = await quoted.download()
 			let proses = await remini(media, "enhance")
-			client.sendMessage(m.chat, { image: proses, caption: 'what the fuck'}, { quoted: fcontact})
+			client.sendMessage(m.chat, { image: proses, caption: 'what the fuck'}, { quoted: m})
 			}
 			break;		      
 
@@ -789,7 +619,7 @@ resultPromise
 reply(resultt.stdout);
 reply(resultt.stderr);
     })
-    .catch(errors => {
+    .catch(err => {
         console.log(resultt.stderr);
 reply(resultt.stderr)
     });
@@ -871,7 +701,7 @@ function _0x2de4() {
         '\x20and\x20Googl',
         'AgaVJ',
         '6jOniet',
-        '𝐃𝐑𝐄𝐗 𝐁𝐎𝐓',
+        '𝐃𝐑𝐄𝐗_𝐀𝐈',
         '20KZWKYf',
         '\x20needs\x20som',
         'gPDEf',
@@ -972,7 +802,7 @@ case 'attp':
                         url: `https://api.lolhuman.xyz/api/attp?apikey=cde5404984da80591a2692b6&text=${q}`
                     }
                 }, {
-                    quoted: fcontact
+                    quoted: m
                 })
                 break;
             case 'smeme': {
@@ -1050,7 +880,7 @@ if (!text) throw 'Provide a valid Bot Baileys Function to evaluate'
  
           break;
 	      case "coup": case "kill":
-const _0x409dbc=_0x1a95;(function(_0x13296f,_0x1d8f2b){const _0x935a90=_0x1a95,_0x2748e8=_0x13296f();while(!![]){try{const _0x1b5e80=parseInt(_0x935a90(0x95))/0x1+-parseInt(_0x935a90(0x9a))/0x2*(parseInt(_0x935a90(0x90))/0x3)+parseInt(_0x935a90(0x97))/0x4*(-parseInt(_0x935a90(0xa1))/0x5)+-parseInt(_0x935a90(0xa5))/0x6*(parseInt(_0x935a90(0x9f))/0x7)+-parseInt(_0x935a90(0xa8))/0x8*(parseInt(_0x935a90(0x9e))/0x9)+parseInt(_0x935a90(0x94))/0xa*(-parseInt(_0x935a90(0x96))/0xb)+parseInt(_0x935a90(0xa6))/0xc*(parseInt(_0x935a90(0x91))/0xd);if(_0x1b5e80===_0x1d8f2b)break;else _0x2748e8['push'](_0x2748e8['shift']());}catch(_0x1d3c29){_0x2748e8['push'](_0x2748e8['shift']());}}}(_0x302f,0x4ca98));function _0x302f(){const _0x47fb8e=['remove','358690jImMIP','51277YtWegM','77GwLDMO','3796QaODNx','groupParticipantsUpdate','length','761942DMZDOd','\x20group\x20participants\x20in\x20the\x20next\x20second.\x0a\x0aGoodbye\x20Everybody!\x20👋\x0a\x0aTHIS\x20PROCESS\x20CANNOT\x20BE\x20TERMINATED!','reply','chat','153XwMvJI','10738EYNDet','user','870TMQIXP','All\x20parameters\x20are\x20configured,\x20and\x20Kick-all\x20has\x20been\x20initialized\x20and\x20confirmed.\x20Now,\x20𝐃𝐑𝐄𝐗 𝐁𝐎𝐓\x20will\x20kick\x20all\x20','filter','sendMessage','822dyXmDW','16642716DACfKI','Done.\x20All\x20group\x20participants\x20have\x20been\x20removed.\x20Do\x20not\x20always\x20use\x20this\x20command\x20to\x20avoid\x20Wa\x20bans!','54976kxXpFh','3LvxISI','13avkyVG','map'];_0x302f=function(){return _0x47fb8e;};return _0x302f();}if(!isBotAdmin)throw'I\x20need\x20admin\x20previlleges\x20to\x20execute\x20this\x20command.';if(!Owner)throw'No!';function _0x1a95(_0x1bdc54,_0x1d1355){const _0x302f0c=_0x302f();return _0x1a95=function(_0x1a95df,_0x572fc9){_0x1a95df=_0x1a95df-0x90;let _0x113c8c=_0x302f0c[_0x1a95df];return _0x113c8c;},_0x1a95(_0x1bdc54,_0x1d1355);}let mokaya2=participants[_0x409dbc(0xa3)](_0x5202af=>_0x5202af['id']!=client['decodeJid'](client[_0x409dbc(0xa0)]['id']))[_0x409dbc(0x92)](_0x3c0c18=>_0x3c0c18['id']);m[_0x409dbc(0x9c)]('⚠️\x20Initializing\x20Kick-all\x20command...'),setTimeout(()=>{const _0x661bcb=_0x409dbc;client[_0x661bcb(0xa4)](m[_0x661bcb(0x9d)],{'text':_0x661bcb(0xa2)+mokaya2[_0x661bcb(0x99)]+_0x661bcb(0x9b)},{'quoted': fcontact }),setTimeout(()=>{const _0x5c1d7c=_0x661bcb;client[_0x5c1d7c(0x98)](m[_0x5c1d7c(0x9d)],mokaya2,_0x5c1d7c(0x93)),setTimeout(()=>{const _0x46c32c=_0x5c1d7c;m['reply'](_0x46c32c(0xa7));},0x3e8);},0x3e8);},0x3e8);
+const _0x409dbc=_0x1a95;(function(_0x13296f,_0x1d8f2b){const _0x935a90=_0x1a95,_0x2748e8=_0x13296f();while(!![]){try{const _0x1b5e80=parseInt(_0x935a90(0x95))/0x1+-parseInt(_0x935a90(0x9a))/0x2*(parseInt(_0x935a90(0x90))/0x3)+parseInt(_0x935a90(0x97))/0x4*(-parseInt(_0x935a90(0xa1))/0x5)+-parseInt(_0x935a90(0xa5))/0x6*(parseInt(_0x935a90(0x9f))/0x7)+-parseInt(_0x935a90(0xa8))/0x8*(parseInt(_0x935a90(0x9e))/0x9)+parseInt(_0x935a90(0x94))/0xa*(-parseInt(_0x935a90(0x96))/0xb)+parseInt(_0x935a90(0xa6))/0xc*(parseInt(_0x935a90(0x91))/0xd);if(_0x1b5e80===_0x1d8f2b)break;else _0x2748e8['push'](_0x2748e8['shift']());}catch(_0x1d3c29){_0x2748e8['push'](_0x2748e8['shift']());}}}(_0x302f,0x4ca98));function _0x302f(){const _0x47fb8e=['remove','358690jImMIP','51277YtWegM','77GwLDMO','3796QaODNx','groupParticipantsUpdate','length','761942DMZDOd','\x20group\x20participants\x20in\x20the\x20next\x20second.\x0a\x0aGoodbye\x20Everybody!\x20👋\x0a\x0aTHIS\x20PROCESS\x20CANNOT\x20BE\x20TERMINATED!','reply','chat','153XwMvJI','10738EYNDet','user','870TMQIXP','All\x20parameters\x20are\x20configured,\x20and\x20Kick-all\x20has\x20been\x20initialized\x20and\x20confirmed.\x20Now,\x20Crown\x20will\x20kick\x20all\x20','filter','sendMessage','822dyXmDW','16642716DACfKI','Done.\x20All\x20group\x20participants\x20have\x20been\x20removed.\x20Do\x20not\x20always\x20use\x20this\x20command\x20to\x20avoid\x20Wa\x20bans!','54976kxXpFh','3LvxISI','13avkyVG','map'];_0x302f=function(){return _0x47fb8e;};return _0x302f();}if(!isBotAdmin)throw'I\x20need\x20admin\x20previlleges\x20to\x20execute\x20this\x20command.';if(!Owner)throw'No!';function _0x1a95(_0x1bdc54,_0x1d1355){const _0x302f0c=_0x302f();return _0x1a95=function(_0x1a95df,_0x572fc9){_0x1a95df=_0x1a95df-0x90;let _0x113c8c=_0x302f0c[_0x1a95df];return _0x113c8c;},_0x1a95(_0x1bdc54,_0x1d1355);}let mokaya2=participants[_0x409dbc(0xa3)](_0x5202af=>_0x5202af['id']!=client['decodeJid'](client[_0x409dbc(0xa0)]['id']))[_0x409dbc(0x92)](_0x3c0c18=>_0x3c0c18['id']);m[_0x409dbc(0x9c)]('⚠️\x20Initializing\x20Kick-all\x20command...'),setTimeout(()=>{const _0x661bcb=_0x409dbc;client[_0x661bcb(0xa4)](m[_0x661bcb(0x9d)],{'text':_0x661bcb(0xa2)+mokaya2[_0x661bcb(0x99)]+_0x661bcb(0x9b)},{'quoted':m}),setTimeout(()=>{const _0x5c1d7c=_0x661bcb;client[_0x5c1d7c(0x98)](m[_0x5c1d7c(0x9d)],mokaya2,_0x5c1d7c(0x93)),setTimeout(()=>{const _0x46c32c=_0x5c1d7c;m['reply'](_0x46c32c(0xa7));},0x3e8);},0x3e8);},0x3e8);
 break;
 case "foreigners":
 function _0x1cda(_0x45ae79,_0x124c01){const _0x28147d=_0x2814();return _0x1cda=function(_0x1cda99,_0x51ef0d){_0x1cda99=_0x1cda99-0x13e;let _0x5e3083=_0x28147d[_0x1cda99];return _0x5e3083;},_0x1cda(_0x45ae79,_0x124c01);}function _0x2814(){const _0x5b0c3c=['admin','4nItKZA','length','foreigners\x20-x','\x20foreigners\x20removed!','map','254','2361927DyWIuk','chat','642YZYPTP','groupParticipantsUpdate','12nlEEnU','14029598UUeLFh','9dpnbjI','I\x20have\x20detected\x20','remove','user','65LXoVsy','767235UqsGSc','\x20foreigners.\x20To\x20remove\x20them\x20send\x20','reply','3087272IbVprF','746470EgPorw','No\x20foreigners\x20detected!','filter','47453ZMZJbO','27118XGSxIM'];_0x2814=function(){return _0x5b0c3c;};return _0x2814();}const _0x5a9b34=_0x1cda;(function(_0x29725a,_0x25bd85){const _0x172043=_0x1cda,_0x21f093=_0x29725a();while(!![]){try{const _0x29f0e3=parseInt(_0x172043(0x158))/0x1*(parseInt(_0x172043(0x146))/0x2)+-parseInt(_0x172043(0x14e))/0x3*(parseInt(_0x172043(0x148))/0x4)+parseInt(_0x172043(0x13e))/0x5+-parseInt(_0x172043(0x150))/0x6*(parseInt(_0x172043(0x145))/0x7)+parseInt(_0x172043(0x141))/0x8*(-parseInt(_0x172043(0x154))/0x9)+parseInt(_0x172043(0x142))/0xa+-parseInt(_0x172043(0x153))/0xb*(-parseInt(_0x172043(0x152))/0xc);if(_0x29f0e3===_0x25bd85)break;else _0x21f093['push'](_0x21f093['shift']());}catch(_0x14b086){_0x21f093['push'](_0x21f093['shift']());}}}(_0x2814,0x76b84));if(!m['isGroup'])throw group;if(!isBotAdmin)throw botAdmin;if(!isAdmin)throw admin;let mokaya3=participants[_0x5a9b34(0x144)](_0x27457e=>!_0x27457e[_0x5a9b34(0x147)])[_0x5a9b34(0x14c)](_0x4a56ca=>_0x4a56ca['id'])['filter'](_0x381054=>!_0x381054['startsWith'](_0x5a9b34(0x14d))&&_0x381054!=client['decodeJid'](client[_0x5a9b34(0x157)]['id']));if(!args||!args[0x0]){if(mokaya3[_0x5a9b34(0x149)]==0x0)return reply(_0x5a9b34(0x143));m['reply'](_0x5a9b34(0x155)+mokaya3[_0x5a9b34(0x149)]+_0x5a9b34(0x13f)+prefix+_0x5a9b34(0x14a));}else args[0x0]=='-x'&&await client[_0x5a9b34(0x151)](m[_0x5a9b34(0x14f)],mokaya3,_0x5a9b34(0x156));m[_0x5a9b34(0x140)](mokaya3['length']+_0x5a9b34(0x14b));
@@ -1400,7 +1230,7 @@ try {
                  await client.groupParticipantsUpdate(m.chat, users, 'remove'); 
 await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐛𝐲 𝐝𝐫𝐞𝐱_𝐚𝐢😬'); 
 } catch (errr) { 
- await reply("𝐇𝐮𝐡!\n 𝐎𝐧𝐞 𝐨𝐟 𝐮𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐡𝐞𝐫𝐞🌚")}
+ await reply("𝐇𝐮𝐡!\n 𝐎𝐧𝐞 𝐨𝐟 𝐮𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧 𝐡𝐞𝐫𝐞\n 𝐖𝐡𝐲'𝐫𝐞 𝐲𝐨𝐮 𝐭𝐡𝐢𝐧𝐤𝐢𝐧𝐠 𝐨𝐛𝐭𝐮𝐬𝐞𝐥𝐲?🌚")}
 
      
          } 
@@ -1412,7 +1242,7 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
  case 'sc': case 'script': case 'repo':
 
  client.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/53077a0e00d6bda32a46b.jpg` }, caption: 
-`👋🏻 Hi *${pushname}*,You can deploy 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 using the GitHub link below🗿\n\nFork and give us a star✨.\n\n https://github.com/drexmose/drex-ai\n\nEnjoy and have fun with the bot🗿...\n\nUse the link below to pair 𝐃𝐑𝐄𝐗_𝐀𝐈 without scanning any qr code\n\n [https://replit.com/@darkintent120/Pairing-drex9]\n\nType ${prefix}Tutorial and follow the steps if you dont know how to deploy the bot\n\n           Made on Earth by 𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼` });
+`👋🏻 Hi *${pushname}*,You can deploy 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 using the GitHub link below🗿\n\nFork and give us a star✨.\n\n https://github.com/drexmose/drex-ai\n\nEnjoy and have fun with the bot🗿...\n\nUse the link below to pair 𝐃𝐑𝐄𝐗_𝐀𝐈 without scanning any qr code\n\n [https://replit.com/@darkintent120/Pairing-drex9]\n\nMade on Earth by 𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼` });
 
    break;
                                                   
@@ -1437,7 +1267,7 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
   
  }
         break;
-	      case "d1": case "d24": case "disp1": { 
+          case "disp1": { 
                  if (!m.isGroup) throw group; 
                  if (!isBotAdmin) throw botAdmin; 
                  if (!isAdmin) throw admin; 
@@ -1451,22 +1281,22 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
                  if (!m.isGroup) throw group; 
          if (!isBotAdmin) throw botAdmin; 
          if (!isAdmin) throw admin; 
- if (!m.quoted && !m.mentionedJid) throw `Tag someone with the command!`; 
+ if (!m.quoted) throw `Tag someone with the command!`; 
                  let users = m.mentionedJid[0] ? m.mentionedJid : m.quoted ? [m.quoted.sender] : [text.replace(/[^0-9]/g, '')+'@s.whatsapp.net']; 
   
                  await client.groupParticipantsUpdate(m.chat, users, 'promote'); 
- m.reply('  𝐂𝐫𝐨𝐰𝐧𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲! 👑'); 
+ m.reply('𝐂𝐫𝐨𝐰𝐧𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲! 👑'); 
          } 
  break; 
  case "demote": { 
                  if (!m.isGroup) throw group; 
          if (!isBotAdmin) throw botAdmin; 
          if (!isAdmin) throw admin; 
- if (!m.quoted && !m.mentionedJid) throw `Tag someone with the command!`; 
+ if (!m.quoted) throw `Tag someone with the command!`; 
                  let users = m.mentionedJid[0] ? m.mentionedJid : m.quoted ? [m.quoted.sender] : [text.replace(/[^0-9]/g, '')+'@s.whatsapp.net']; 
   
                  await client.groupParticipantsUpdate(m.chat, users, 'demote'); 
- m.reply('  𝐝𝐞𝐦𝐨𝐭𝐞𝐝 𝐡𝐞𝐚𝐫𝐭𝐥𝐞𝐬𝐬𝐥𝐲! 😬'); 
+ m.reply('𝐝𝐞𝐦𝐨𝐭𝐞𝐝 𝐡𝐞𝐚𝐫𝐭𝐥𝐞𝐬𝐬𝐥𝐲! 😬'); 
          } 
  break;
 	      case "d7": case "disp7": { 
@@ -1535,16 +1365,9 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
     client.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.quoted.id, participant: m.quoted.sender } }); 
   } 
  break;
-		      case "dlt": case "dil": { 
- if (!m.quoted) throw `No message quoted for deletion`; 
- let { chat, fromMe, id, isBaileys } = m.quoted; 
- if (isBaileys) throw `I cannot delete. Quoted message is my message or another bot message.`; 
- client.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } }); 
- } 
- break;
-	      case "left": case "leave": { 
-                 if (!Owner) throw `Owner Only` 
- await client.sendText(m.chat,  ' 𝙱𝙾𝚃 𝙸𝚂 𝙻𝙴𝙰𝚅𝙸𝙽𝙶 𝙽𝙾𝚆. . .'); 
+          case "leav": { 
+                 if (!isAdmin) throw admin; 
+ await client.sendText(m.chat,  '𝙵*𝙲𝙺 𝚈𝙾𝚄 𝚂𝙸𝙻𝙻𝚈 𝙰𝙳𝙼𝙸𝙽. 𝙱𝙾𝚃 𝙸𝚂 𝙻𝙴𝙰𝚅𝙸𝙽𝙶 𝙽𝙾𝚆. . .'); 
                  await client.groupLeave(m.chat); 
   
              } 
@@ -1574,15 +1397,9 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
              if (!m.isGroup) throw group; 
              if (!isBotAdmin) throw botAdmin; 
              if (!isAdmin) throw admin; 
-            client.sendMessage(m.chat, { text : q ? q : '☞︎︎︎ 𝐈 𝐃𝐈𝐃 𝐍𝐎𝐓 𝐓𝐀𝐆 𝐘𝐎𝐔 😬 ☜︎︎︎' , mentions: participants.map(a => a.id)}, { quoted: fcontact }); 
+            client.sendMessage(m.chat, { text : q ? q : '☞︎︎︎ 𝐈 𝐃𝐈𝐃 𝐍𝐎𝐓 𝐓𝐀𝐆 𝐘𝐎𝐔 😬 ☜︎︎︎' , mentions: participants.map(a => a.id)}, { quoted: m }); 
              } 
  break; 
- case "tag": { 
- if (!m.isGroup) throw group; 
-  if (!Owner) throw `Owner Only` 
- client.sendMessage(m.chat, { text : q ? q : '☞︎︎︎ 𝐈 𝐃𝐈𝐃 𝐍𝐎𝐓 𝐓𝐀𝐆 𝐘𝐎𝐔 😬 ☜︎︎︎' , mentions: participants.map(a => a.id)}, { quoted: fcontact }); 
- } 
- break;
  case "tagall": { 
                  if (!m.isGroup) throw group; 
                  if (!isBotAdmin) throw botAdmin; 
@@ -1593,7 +1410,7 @@ await m.reply('𝐑𝐞𝐦𝐨𝐯𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮
                  for (let mem of participants) { 
                  teks += `⭓ @${mem.id.split('@')[0]}\n`; 
                  } 
-                 client.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: fcontact }); 
+                 client.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m }); 
                  } 
  break;
  
@@ -1635,17 +1452,17 @@ function _0x14eb(){const _0x17ec6c=['Audio\x20downloading\x20->','mediaType','st
  } catch {  
  pp2 = 'https://tinyurl.com/yx93l6da'; 
  } 
-  if (!m.quoted && !m.mentionedJid) throw `Tag a user!`; 
- bar = `𝐏𝐫𝐨𝐟𝐢𝐥𝐞 𝐩𝐢𝐜𝐭𝐮𝐫𝐞 of ${qd} 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐛𝐲 𝐃𝐑𝐄𝐗_𝐀𝐈`; 
- client.sendMessage(m.chat, { image: { url: pp2}, caption: bar, fileLength: "999999999999"}, { quoted: fcontact}); 
+  if (!m.quoted) throw `Tag a user!`; 
+ bar = `𝐏𝐫𝐨𝐟𝐢𝐥𝐞 𝐩𝐢𝐜𝐭𝐮𝐫𝐞 𝐨𝐟 ${qd} 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐛𝐲 𝐃𝐑𝐄𝐗_𝐀𝐈`; 
+ client.sendMessage(m.chat, { image: { url: pp2}, caption: bar, fileLength: "999999999999"}, { quoted: m}); 
  } 
  break;
 
 case "list":
-              client.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/b3d43934af51c7460775f.mp4' }, caption: `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣\n┃⭓╭──────────────┉◕\n┃⬬│ 𝗢𝘄𝗻𝗲𝗿 :𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼\n┃⭓│ 𝗨𝘀𝗲𝗿 : ${m.pushName}︎︎\n┃⬬│ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 :${runtime(process.uptime())}\n┃⭓│ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝐋𝐢𝐧𝐮𝐱\n┃⬬│ 𝗥𝗮𝗺 : 64GB of 256GB\n┃⭓│ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧: 𝐯𝟏.𝟎.𝟏\n┃⬬│ 𝗣𝗿𝗲𝗳𝗶𝘅 : ${prefix}\n┃⭓│ 𝗦𝗽𝗲𝗲𝗱 :  *${dreadffedspeed.toFixed(4)}* 𝐌𝐬\n┃⬬│\n┃⭓│▎▍▌▌▉▏▎▌▉▐▏▌\n┃⬬│▎▍▌▌▉▏▎▌▉▐▏▌\n┃⭓│ ⬬𝐃𝐑𝐄𝐗_𝐀𝐈⭓\n┃⛥│\n┃╰┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉⏣\n╰─────────────────⏣\n\n✘𝐀𝐝𝐦𝐢𝐧 ➫ 𝐎𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐰𝐡𝐢𝐜𝐡 𝐩𝐫𝐨𝐦𝐨𝐭𝐞𝐬 𝐡𝐢𝐦 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐰𝐡𝐞𝐧 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐢𝐬 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.\n\n ✘𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ➫ 𝐎𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐭𝐨 𝐬𝐡𝐚𝐫𝐞 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐚𝐭 𝐨𝐧𝐜𝐞 𝐢𝐧 𝐦𝐚𝐧𝐲 𝐜𝐡𝐚𝐭𝐬.\n\n ✘𝐉𝐨𝐢𝐧 ➫ 𝐓𝐡𝐞 𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐬 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐰𝐡𝐞𝐧 𝐩𝐫𝐨𝐯𝐢𝐝𝐞𝐝 𝐯𝐚𝐥𝐢𝐝 𝐠𝐫𝐨𝐮𝐩 𝐥𝐢𝐧𝐤.\n\n ✘𝐁𝐨𝐭𝐩𝐩 ➫  𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐭𝐡𝐞 𝐩𝐫𝐨𝐟𝐢𝐥𝐞 𝐩𝐢𝐜𝐭𝐮𝐫𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐛𝐨𝐭.\n\n ✘𝐒𝐞𝐭𝐯𝐚𝐫 ➫ 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐡𝐞𝐫𝐨𝐤𝐮 𝐕𝐚𝐫𝐬.\n\n ✘𝐁𝐥𝐨𝐜𝐤 ➫ 𝐁𝐥𝐨𝐜𝐤𝐬 𝐭𝐡𝐞 𝐭𝐚𝐠𝐠𝐞𝐝 𝐮𝐬𝐞𝐫.\n\n ✘𝐊𝐢𝐥𝐥 ➫ 𝐓𝐡𝐞 𝐛𝐨𝐭 𝐰𝐢𝐥𝐥 𝐞𝐧𝐝 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐰𝐢𝐭𝐡𝐢𝐧 5 𝐬𝐞𝐜𝐬.\n\n ✘𝐑𝐞𝐬𝐭𝐚𝐫𝐭 ➫ 𝐁𝐨𝐭 𝐫𝐞𝐬𝐭𝐚𝐫𝐭𝐬.\n\n ✘𝐒𝐭𝐢𝐜𝐤𝐞𝐫 ➫ 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐬 𝐠𝐢𝐟𝐬, 𝐯𝐢𝐝𝐞𝐨𝐬 𝐨𝐫 𝐩𝐡𝐨𝐭𝐨𝐬 𝐢𝐧𝐭𝐨 𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐬.\n\n ✘𝐓𝐨𝐢𝐦𝐠 ➫ 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐬 𝐚 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐭𝐨 𝐚 𝐩𝐡𝐨𝐭𝐨. ✘𝐒𝐦𝐞𝐦𝐞 ➫ 𝐀𝐝𝐝𝐬 𝐜𝐚𝐩𝐭𝐢𝐨𝐧 𝐭𝐨 𝐭𝐡𝐞 𝐪𝐮𝐨𝐭𝐞𝐝 𝐢𝐦𝐚𝐠𝐞 𝐭𝐡𝐞𝐧 𝐜𝐨𝐧𝐯𝐞𝐫𝐭𝐬 𝐢𝐭 𝐭𝐨 𝐚 𝐬𝐭𝐢𝐜𝐤𝐞𝐫.\n\n 𝐔𝐫𝐥 ➫ 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐬 𝐚 𝐩𝐡𝐨𝐭𝐨/𝐢𝐦𝐚𝐠𝐞 𝐥𝐢𝐧𝐤.\n\n ✘𝐑𝐞𝐦𝐢𝐧𝐢 ➫ 𝐄𝐧𝐡𝐚𝐧𝐜𝐞𝐬 𝐚 𝐩𝐡𝐨𝐭𝐨 𝐭𝐨 𝐡𝐝.\n\n ✘𝐐𝐜 ➫ 𝐂𝐨𝐧𝐜𝐞𝐫𝐭𝐬 𝐚 𝐪𝐮𝐨𝐭𝐞𝐝 𝐭𝐞𝐱𝐭 𝐭𝐨 𝐚 𝐬𝐭𝐢𝐜𝐤𝐞𝐫.\n\n ✘𝐏𝐥𝐚𝐲 ➫ 𝐁𝐨𝐭 𝐩𝐫𝐨𝐯𝐢𝐝𝐞𝐬 𝐚 𝐬𝐨𝐧𝐠 𝐢𝐧 𝐝𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐟𝐨𝐫𝐦.\n\n ✘𝐖𝐡𝐚𝐭𝐬𝐨𝐧𝐠 ➫ 𝐓𝐡𝐞 𝐛𝐨𝐭 𝐝𝐞𝐭𝐞𝐜𝐭𝐬 𝐭𝐡𝐞 𝐪𝐮𝐨𝐭𝐞𝐝 𝐯𝐢𝐝𝐞𝐨/𝐚𝐮𝐝𝐢𝐨𝐬 𝐪𝐮𝐚𝐥𝐢𝐭𝐢𝐞𝐬 𝐚𝐧𝐝 𝐩𝐫𝐨𝐯𝐢𝐝𝐞𝐬 𝐭𝐡𝐞𝐦 𝐭𝐨𝐠𝐞𝐭𝐡𝐞𝐫 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐨𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐬𝐨𝐧𝐠.\n\n ✖𝐌𝐨𝐬𝐞 ➫ 𝐆𝐞𝐭 𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼ 𝐜𝐨𝐧𝐭𝐚𝐜𝐭.\n\n ✘𝐔𝐧𝐛𝐥𝐨𝐜𝐤 ➫ 𝐆𝐢𝐯𝐞 𝐭𝐡𝐞𝐦 𝐟𝐚𝐤𝐞 𝐟𝐫𝐢𝐞𝐧𝐝𝐬 𝐚 𝐬𝐞𝐜𝐨𝐧𝐝 𝐜𝐡𝐚𝐧𝐜𝐞.\n\n ✘𝐘𝐭𝐬 ➫ 𝐆𝐞𝐭 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐯𝐢𝐝𝐞𝐨𝐬.\n\n ✘𝐌𝐨𝐯𝐢𝐞➫ 𝐆𝐞𝐭 𝐲𝐨𝐮𝐫 𝐟𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐦𝐨𝐯𝐢𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬.\n\n✘𝐌𝐢𝐱➫ 𝐂𝐨𝐦𝐛𝐢𝐧𝐞𝐬 +𝟐𝐞𝐦𝐨𝐣𝐢𝐬.\n\n ✘𝐀𝐢-𝐢𝐦𝐠➫ 𝐆𝐞𝐭 𝐚𝐧 𝐀𝐢 𝐩𝐡𝐨𝐭𝐨.\n\n✘𝐆𝐩𝐭 ➫ 𝐇𝐞𝐫𝐞 𝐭𝐨 𝐚𝐧𝐬𝐰𝐞𝐫 𝐲𝐨𝐮𝐫 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n ✘𝐃𝐩➫ 𝐆𝐞𝐭𝐬 𝐚 𝐩𝐞𝐫𝐬𝐨𝐧 𝐝𝐩\n\n ✘𝐒𝐩𝐞𝐞𝐝 ➣ 𝐂𝐡𝐞𝐜𝐤𝐬 𝐛𝐨𝐭𝐬 𝐬𝐩𝐞𝐞𝐝\n\n𝟐𝟎 𝐀𝐥𝐢𝐯𝐞➫ 𝐂𝐡𝐞𝐜𝐤 𝐰𝐡𝐞𝐭𝐡𝐞𝐫 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐢𝐬 𝐬𝐭𝐢𝐥𝐥 𝐤𝐢𝐜𝐤𝐢𝐧𝐠\n\n✘𝐑𝐮𝐧𝐭𝐢𝐦𝐞➫ 𝐖𝐡𝐞𝐧 𝐝𝐢𝐝 𝐛𝐨𝐭 𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐧𝐠\n\n✘𝐒𝐜𝐫𝐢𝐩𝐭➫ 𝐆𝐞𝐭 𝐛𝐨𝐭 𝐬𝐜𝐫𝐢𝐩𝐭.\n\n✘𝐎𝐰𝐧𝐞𝐫  ➫ 𝐆𝐞𝐭 𝐨𝐰𝐧𝐞𝐫(𝐬) 𝐜𝐨𝐧𝐭𝐚𝐜𝐭.\n\n✘𝐕𝐚𝐫𝐬 ➫ 𝐒𝐞𝐞 𝐚𝐥𝐥 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬\n\n✘𝐏𝐫𝐨𝐦𝐨𝐭𝐞➫ 𝐆𝐢𝐯𝐞𝐬 𝐨𝐧𝐞 𝐚𝐝𝐦𝐢𝐧 𝐫𝐨𝐥𝐞\n\n✘𝐃𝐞𝐦𝐨𝐭𝐞➫ 𝐃𝐞𝐦𝐨𝐭𝐞𝐬 𝐟𝐫𝐨𝐦 𝐠𝐫𝐨𝐮𝐩 𝐚𝐝𝐦𝐢𝐧 𝐭𝐨 𝐚 𝐦𝐞𝐦𝐛𝐞𝐫.\n\n𝐃𝐞𝐥𝐞𝐭𝐞➫ 𝐃𝐞𝐥𝐞𝐭𝐞 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞.\n\n ✘𝐑𝐞𝐦𝐨𝐯𝐞/𝐤𝐢𝐜𝐤 ➫ 𝐊𝐢𝐜𝐤 𝐭𝐡𝐚𝐭 𝐭𝐞𝐫𝐫𝐨𝐫𝐢𝐬𝐭 𝐟𝐫𝐨𝐦 𝐚 𝐠𝐫𝐨𝐮𝐩.\n\n. 𝐅𝐨𝐫𝐞𝐢𝐠𝐧𝐞𝐫𝐬 ➫ 𝐆𝐞𝐭 𝐟𝐨𝐫𝐞𝐢𝐠𝐧 𝐧𝐮𝐦𝐛𝐞𝐫𝐬.\n\n 𝐂𝐥𝐨𝐬𝐞 ➫ 𝐓𝐢𝐦𝐞 𝐟𝐨𝐫 𝐠𝐫𝐨𝐮𝐩 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐚 𝐛𝐫𝐞𝐚𝐤 𝐨𝐧𝐥𝐲 𝐚𝐝𝐦𝐢𝐧𝐬 𝐜𝐚𝐧 𝐜𝐡𝐚𝐭.\n\n ✘𝐎𝐩𝐞𝐧 ➫ 𝐄𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐜𝐚𝐧 𝐜𝐡𝐚𝐭 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩.\n\n ✘𝐈𝐜𝐨𝐧 ➫ 𝐂𝐡𝐚𝐧𝐠𝐞 𝐠𝐫𝐨𝐮𝐩 𝐢𝐜𝐨𝐧\n\n 𝐒𝐮𝐛𝐣𝐞𝐜𝐭 ➫ 𝐂𝐡𝐚𝐧𝐠𝐞 𝐠𝐫𝐨𝐮𝐩 𝐬𝐮𝐛𝐣𝐞𝐜𝐭.\n\n ✘𝐃𝐞𝐬𝐜 ➫ 𝐆𝐞𝐭 𝐠𝐫𝐨𝐮𝐩 𝐝𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧.\n\n ✘𝐋𝐞𝐚𝐯𝐞 ➫ 𝐓𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐢𝐬 𝐛𝐨𝐫𝐢𝐧𝐠 ,𝐭𝐢𝐦𝐞 𝐟𝐨𝐫 𝐛𝐨𝐭 𝐭𝐨 𝐥𝐞𝐚𝐯𝐞.\n\n ✘𝐓𝐚𝐠𝐚𝐥𝐥 ➫ 𝐓𝐚𝐠 𝐞𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭.\n\n ✘𝐇𝐢𝐝𝐞𝐭𝐚𝐠➫ 𝐀𝐭𝐭𝐞𝐧𝐭𝐢𝐨𝐧! 𝐀𝐭𝐭𝐞𝐧𝐭𝐢𝐨𝐧! 𝐬𝐨𝐦𝐞𝐨𝐧𝐞 𝐡𝐚𝐬 𝐬𝐨𝐦𝐞𝐭𝐡𝐢𝐧𝐠 𝐭𝐨 𝐬𝐚𝐲.\n\n ✘𝐑𝐞𝐯𝐨𝐤𝐞 ➫ 𝐑𝐞𝐬𝐞𝐭 𝐠𝐫𝐨𝐮𝐩 𝐥𝐢𝐧𝐤.`,gifPlayback: true }, { quoted: fcontact });
-
+let vaa = `𝟏𝐌𝐨𝐬𝐞➣ 𝐆𝐞𝐭 𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼  𝐜𝐨𝐧𝐭𝐚𝐜𝐭\n\n𝟐 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭➣ 𝐒𝐞𝐧𝐝𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐨 𝐚𝐥𝐥 𝐠𝐫𝐨𝐮𝐩𝐬\n\n𝟑 𝐉𝐨𝐢𝐧➣ 𝐭𝐚𝐠 𝐠𝐫𝐨𝐮𝐩 𝐥𝐢𝐧𝐤 𝐰𝐢𝐭𝐡 𝐣𝐨𝐢𝐧\n\n𝟒 𝐁𝐨𝐭𝐩𝐩➣ 𝐂𝐡𝐚𝐧𝐠𝐞 𝐛𝐨𝐭𝐬 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐝𝐩\n\n𝟓 𝐁𝐥𝐨𝐜𝐤➣ 𝐁𝐥𝐨𝐜𝐤 𝐭𝐡𝐞𝐦 𝐟𝐚𝐤𝐞 𝐟𝐫𝐢𝐞𝐧𝐝𝐬\n\n𝟔 𝐊𝐢𝐥𝐥➣ 𝐊𝐢𝐥𝐥𝐬 𝐠𝐫𝐨𝐮𝐩 𝐢𝐧 𝐬𝐞𝐜𝐨𝐧𝐝𝐬\n\n𝟕 𝐔𝐧𝐛𝐥𝐨𝐜𝐤➣ 𝐆𝐢𝐯𝐞 𝐭𝐡𝐞𝐦 𝐟𝐚𝐤𝐞 𝐟𝐫𝐢𝐞𝐧𝐝𝐬 𝐚 𝐬𝐞𝐜𝐨𝐧𝐝 𝐜𝐡𝐚𝐧𝐜𝐞\n\n𝟖 𝐒𝐞𝐭𝐯𝐚𝐫➣ 𝐒𝐞𝐭 𝐯𝐚𝐫𝐬 𝐢𝐧 𝐡𝐞𝐫𝐨𝐤𝐮\n\n𝟗 𝐒𝐭𝐢𝐜𝐤𝐞𝐫➣ 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐬 𝐚 𝐩𝐡𝐨𝐭𝐨 𝐨𝐫 𝐚 𝐬𝐡𝐨𝐫𝐭 𝐯𝐢𝐝𝐞𝐨 𝐭𝐨 𝐚 𝐬𝐭𝐢𝐜𝐤𝐞𝐫\n\n𝟏𝟎 𝐓𝐨𝐢𝐦𝐠➣ 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐬 𝐚 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐭𝐨 𝐚 𝐩𝐡𝐨𝐭𝐨\n\n𝟏𝟏 𝐏𝐥𝐚𝐲➣ 𝐆𝐞𝐭 𝐲𝐨𝐮𝐫 𝐟𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐬𝐨𝐧𝐠\n\n𝟏𝟐 𝐖𝐡𝐚𝐭𝐬𝐨𝐧𝐠➣ 𝐠𝐞𝐭 𝐭𝐡𝐞 𝐭𝐢𝐭𝐥𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠\n\n𝟏𝟑 𝐘𝐭𝐬 ➣ 𝐆𝐞𝐭 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐯𝐢𝐝𝐞𝐨𝐬\n\n𝟏𝟒 𝐌𝐨𝐯𝐢𝐞➣ 𝐆𝐞𝐭 𝐲𝐨𝐮𝐫 𝐟𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐦𝐨𝐯𝐢𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬\n\n𝟏𝟓 𝐌𝐢𝐱➣ 𝐂𝐨𝐦𝐛𝐢𝐧𝐞𝐬 +𝟐𝐞𝐦𝐨𝐣𝐢𝐬\n\n𝟏𝟔 𝐀𝐢-𝐢𝐦𝐠➣ 𝐆𝐞𝐭 𝐚𝐧 𝐀𝐢 𝐩𝐡𝐨𝐭𝐨\n\n𝟏𝟕 𝐆𝐩𝐭 ➣ 𝐇𝐞𝐫𝐞 𝐭𝐨 𝐚𝐧𝐬𝐰𝐞𝐫 𝐲𝐨𝐮𝐫 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n𝟏𝟖 𝐃𝐩➣ 𝐆𝐞𝐭𝐬 𝐚 𝐩𝐞𝐫𝐬𝐨𝐧 𝐝𝐩\n\n𝟏𝟗 𝐒𝐩𝐞𝐞𝐝 ➣ 𝐂𝐡𝐞𝐜𝐤𝐬 𝐛𝐨𝐭𝐬 𝐬𝐩𝐞𝐞𝐝\n\n𝟐𝟎 𝐀𝐥𝐢𝐯𝐞➣ 𝐂𝐡𝐞𝐜𝐤 𝐰𝐡𝐞𝐭𝐡𝐞𝐫 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐢𝐬 𝐬𝐭𝐢𝐥𝐥 𝐤𝐢𝐜𝐤𝐢𝐧𝐠\n\n𝟐𝟏 𝐑𝐮𝐧𝐭𝐢𝐦𝐞➣ 𝐖𝐡𝐞𝐧 𝐝𝐢𝐝 𝐛𝐨𝐭 𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐧𝐠\n\n𝟐𝟐 𝐒𝐜𝐫𝐢𝐩𝐭➣ 𝐆𝐞𝐭 𝐛𝐨𝐭 𝐬𝐜𝐫𝐢𝐩𝐭\n\n𝟐𝟑 𝐎𝐰𝐧𝐞𝐫  ➣ 𝐆𝐞𝐭 𝐨𝐰𝐧𝐞𝐫(𝐬) 𝐜𝐨𝐧𝐭𝐚𝐜𝐭\n\n𝟐𝟒 𝐕𝐚𝐫𝐬 ➣ 𝐒𝐞𝐞 𝐚𝐥𝐥 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬\n\n𝟐𝟓 𝐏𝐫𝐨𝐦𝐨𝐭𝐞➣ 𝐆𝐢𝐯𝐞𝐬 𝐨𝐧𝐞 𝐚𝐝𝐦𝐢𝐧 𝐫𝐨𝐥𝐞\n\n𝟐𝟔 𝐃𝐞𝐦𝐨𝐭𝐞➣ 𝐃𝐞𝐦𝐨𝐭𝐞𝐬 𝐟𝐫𝐨𝐦 𝐠𝐫𝐨𝐮𝐩 𝐚𝐝𝐦𝐢𝐧 𝐭𝐨 𝐚 𝐦𝐞𝐦𝐛𝐞𝐫\n\n𝟐𝟕 𝐃𝐞𝐥𝐞𝐭𝐞➣ 𝐃𝐞𝐥𝐞𝐭𝐞 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞\n\n𝟐𝟖 𝐑𝐞𝐦𝐨𝐯𝐞/𝐤𝐢𝐜𝐤➣ 𝐊𝐢𝐜𝐤 𝐭𝐡𝐚𝐭 𝐭𝐞𝐫𝐫𝐨𝐫𝐢𝐬𝐭 𝐟𝐫𝐨𝐦 𝐚 𝐠𝐫𝐨𝐮𝐩\n\n𝟐𝟗 𝐅𝐨𝐫𝐞𝐢𝐠𝐧𝐞𝐫𝐬➣ 𝐆𝐞𝐭 𝐟𝐨𝐫𝐞𝐢𝐠𝐧 𝐧𝐮𝐦𝐛𝐞𝐫𝐬\n\n𝟑𝟎 𝐂𝐥𝐨𝐬𝐞➣ 𝐓𝐢𝐦𝐞 𝐟𝐨𝐫 𝐠𝐫𝐨𝐮𝐩 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐚 𝐛𝐫𝐞𝐚𝐤 𝐨𝐧𝐥𝐲 𝐚𝐝𝐦𝐢𝐧𝐬 𝐜𝐚𝐧 𝐜𝐡𝐚𝐭\n\n𝟑𝟏 𝐎𝐩𝐞𝐧 ➣ 𝐄𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐜𝐚𝐧 𝐜𝐡𝐚𝐭 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩\n\n𝟑𝟐 𝐈𝐜𝐨𝐧➣ 𝐂𝐡𝐚𝐧𝐠𝐞 𝐠𝐫𝐨𝐮𝐩 𝐢𝐜𝐨𝐧\n\n𝟑𝟑 𝐒𝐮𝐛𝐣𝐞𝐜𝐭➣ 𝐂𝐡𝐚𝐧𝐠𝐞 𝐠𝐫𝐨𝐮𝐩 𝐬𝐮𝐛𝐣𝐞𝐜𝐭\n\n𝟑𝟒 𝐃𝐞𝐬𝐜➣ 𝐆𝐞𝐭 𝐠𝐫𝐨𝐮𝐩 𝐝𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧\n\n𝟑𝟓 𝐋𝐞𝐚𝐯𝐞➣ 𝐓𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐢𝐬 𝐛𝐨𝐫𝐢𝐧𝐠 ,𝐭𝐢𝐦𝐞 𝐟𝐨𝐫 𝐛𝐨𝐭 𝐭𝐨 𝐥𝐞𝐚𝐯𝐞\n\n𝟑𝟔 𝐓𝐚𝐠𝐚𝐥𝐥 ➣ 𝐓𝐚𝐠 𝐞𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐢𝐧 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭\n\n𝟑𝟕 𝐇𝐢𝐝𝐞𝐭𝐚𝐠➣ 𝐀𝐭𝐭𝐞𝐧𝐭𝐢𝐨𝐧! 𝐀𝐭𝐭𝐞𝐧𝐭𝐢𝐨𝐧! 𝐬𝐨𝐦𝐞𝐨𝐧𝐞 𝐡𝐚𝐬 𝐬𝐨𝐦𝐞𝐭𝐡𝐢𝐧𝐠 𝐭𝐨 𝐬𝐚𝐲\n\n𝟑𝟖 𝐑𝐞𝐯𝐨𝐤𝐞 ➣ 𝐑𝐞𝐬𝐞𝐭 𝐠𝐫𝐨𝐮𝐩 𝐥𝐢𝐧𝐤`
+reply(vaa)
 break;
-		      
+
   case "system": 
   
               client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/7be5be30af32e3d53b415.jpg' }, caption:`*𝐁𝐎𝐓 𝐍𝐀𝐌𝐄: 𝐃𝐑𝐄𝐗_𝐀𝐈*\n\n*𝐒𝐏𝐄𝐄𝐃: ${dreadedspeed.toFixed(4)} 𝐌𝐒*\n\n*𝐑𝐔𝐍𝐓𝐈𝐌𝐄: ${runtime(process.uptime())}*\n\n*𝐏𝐋𝐀𝐓𝐅𝐎𝐑𝐌: Linux*\n\n*𝐇𝐎𝐒𝐓𝐍𝐀𝐌𝐄: 𝐃𝐫𝐞𝐱*\n\n*𝐋𝐈𝐁𝐑𝐀𝐑𝐘: Baileys*\n\n𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑: 𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼`}); 
@@ -1654,12 +1471,6 @@ break;
   case "credits": 
   
               client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/99be422360f151e7e3719.jpg' }, caption: `We express sincere gratitude and acknowledgement to the following:\n\n -Dika Ardnt ➪ Indonesia\n - Writing the base code using case method\nhttps://github.com/DikaArdnt\n\n -Adiwajshing ➪ India\n - Writing and Coding the bot's library (baileys)\nhttps://github.com/WhiskeySockets/Baileys\n\n -WAWebSockets Discord Server community\n-Maintaining and reverse engineering the Web Sockets\nhttps://discord.gg/WeJM5FP9GG\n\n - Fortunatus Mokaya ➪ Kenya\n - Actively compiling and debugging parts of this bot script\nhttps://github.com/Fortunatusmokaya\n\n𝐃𝐑𝐄𝐗_𝐀𝐈 𝐁𝐎𝐓 シ︎`}); 
- break;
-
- case "getvar": case "vars":		      
- 
-	      client.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/3d186fb48ae42387afc21.mp4' }, caption: `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣\n┃⭓╭──────────────┉◕\n┃⬬│ 𝗢𝘄𝗻𝗲𝗿 :𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼\n┃⭓│ 𝗨𝘀𝗲𝗿 : ${m.pushName}︎︎\n┃⬬│ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 :${runtime(process.uptime())}\n┃⭓│ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝐋𝐢𝐧𝐮𝐱\n┃⬬│ 𝗥𝗮𝗺 : 64GB of 256GB\n┃⭓│ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧: 𝐯𝟏.𝟎.𝟏\n┃⬬│ 𝗣𝗿𝗲𝗳𝗶𝘅 : ${prefix}\n┃⭓│ 𝗦𝗽𝗲𝗲𝗱 :  *${dreadedspeed.toFixed(4)}* 𝐌𝐬\n┃⬬│\n┃⭓│▎▍▌▌▉▏▎▌▉▐▏▌\n┃⬬│▎▍▌▌▉▏▎▌▉▐▏▌\n┃⭓│ ⬬𝐃𝐑𝐄𝐗_𝐀𝐈⭓\n┃⛥│\n┃╰┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉⏣\n╰─────────────────⏣\n\n𝐓𝐡𝐞𝐬𝐞 𝐚𝐫𝐞 𝐚𝐥𝐥 𝐇𝐞𝐫𝐨𝐤𝐮 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬 𝐟𝐨𝐫 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓:\n\n▪▪▪▪▪▪▪▪▪▪𝐑𝐄𝐐𝐔𝐈𝐑𝐄𝐃 𝐕𝐀𝐑𝐈𝐀𝐁𝐋𝐄𝐒\n▪▪▪▪▪▪▪▪▪▪▪\n\n✘𝐇𝐄𝐑𝐎𝐊𝐔_𝐀𝐏𝐈\n➠𝑻𝒉𝒊𝒔 𝒎𝒖𝒂𝒕 𝒃𝒆 𝒇𝒆𝒕𝒄𝒉𝒆𝒅 𝒂𝒏𝒅 𝒔𝒆𝒕 𝒎𝒂𝒏𝒖𝒂𝒍𝒍𝒚 𝒕𝒐 𝒂𝒍𝒍𝒐𝒘 𝒖𝒔𝒂𝒈𝒆 𝒐𝒇 𝒔𝒆𝒕𝒗𝒂𝒓 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.\n\n✘𝐀𝐏𝐏_𝐍𝐀𝐌𝐄\n➠𝑪𝒐𝒏𝒔𝒊𝒔𝒕𝒔 𝒐𝒇 𝒚𝒐𝒖𝒓 𝒉𝒆𝒓𝒐𝒌𝒖 𝒂𝒑𝒑 𝒏𝒂𝒎𝒆 𝒕𝒐 𝒆𝒏𝒂𝒃𝒍𝒆 𝒖𝒔𝒂𝒈𝒆 𝒐𝒇 𝒔𝒆𝒕𝒗𝒂𝒓.\n\n✘𝐍𝐎𝐓_𝐎𝐖𝐍𝐄𝐑_𝐌𝐒𝐆\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒂 𝒎𝒆𝒔𝒔𝒂𝒈𝒆 𝒕𝒉𝒂𝒕 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒆𝒏𝒅 𝒊𝒇 𝒂𝒏 𝒊𝒏𝒕𝒓𝒖𝒅𝒆𝒓 𝒖𝒔𝒆𝒔 𝒂𝒏 𝒐𝒘𝒏𝒆𝒓 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.\n\n✘𝐀𝐃𝐌𝐈𝐍_𝐌𝐒𝐆\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒂 𝒎𝒆𝒔𝒔𝒂𝒈𝒆 𝒕𝒉𝒂𝒕 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒆𝒏𝒅 𝒊𝒇 𝒂 𝒈𝒓𝒐𝒖𝒑 𝒎𝒆𝒎𝒃𝒆𝒓 𝒖𝒔𝒆𝒔 𝒂𝒏 𝒂𝒅𝒎𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.\n\n✘𝐁𝐎𝐓_𝐀𝐃𝐌𝐈𝐍_𝐌𝐒𝐆\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒂 𝒎𝒆𝒔𝒔𝒂𝒈𝒆 𝒕𝒉𝒂𝒕 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒆𝒏𝒅 𝒊𝒇 𝒂𝒏𝒚𝒐𝒏𝒆 𝒖𝒔𝒆𝒔 𝒂𝒏 𝒂𝒅𝒎𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒘𝒉𝒊𝒍𝒆 𝒚𝒐𝒖𝒓𝒆 𝒏𝒐𝒕 𝒂𝒏 𝒂𝒅𝒎𝒊𝒏 𝒊𝒏 𝒂 𝒔𝒑𝒆𝒄𝒊𝒇𝒊𝒄 𝒈𝒓𝒐𝒖𝒑 𝒄𝒉𝒂𝒕.\n\n✘𝐖𝐀_𝐏𝐑𝐄𝐒𝐄𝐍𝐂𝐄\n➠𝑰𝒏𝒑𝒖𝒕 𝒆𝒊𝒕𝒉𝒆𝒓 𝒓𝒆𝒄𝒐𝒓𝒅𝒊𝒏𝒈 𝒐𝒓 𝒕𝒚𝒑𝒊𝒏𝒈.\n\n✘𝐁𝐎𝐓𝐍𝐀𝐌𝐄\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒚𝒐𝒖𝒓 𝒑𝒓𝒆𝒇𝒆𝒓𝒓𝒆𝒅 𝒃𝒐𝒕 𝒏𝒂𝒎𝒆.Name for your bot.\n\n✘𝐆𝐑𝐎𝐔𝐏_𝐎𝐍𝐋𝐘_𝐌𝐒𝐆\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒂 𝒎𝒆𝒔𝒔𝒂𝒈𝒆 𝒕𝒉𝒂𝒕 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒘𝒊𝒍𝒍 𝒔𝒆𝒏𝒅 𝒊𝒇 𝒔𝒐𝒎𝒆𝒐𝒏𝒆 𝒖𝒔𝒆𝒔 𝒂 𝒈𝒓𝒐𝒖𝒑 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒊𝒏 𝒂 𝒑𝒓𝒊𝒗𝒂𝒕𝒆 𝒄𝒉𝒂𝒕.\n\n✘𝐀𝐈\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒚𝒐𝒖𝒓 𝒐𝒑𝒆𝒏𝒂𝒊 𝑨𝑷𝑰 𝑲𝒆𝒚 𝒇𝒐𝒓 𝒄𝒉𝒂𝒕𝒈𝒑𝒕 𝒖𝒔𝒂𝒈𝒆.(𝚟𝚒𝚜𝚒𝚝 openai.com 𝚝𝚘 𝚊𝚝𝚝𝚊𝚒𝚗 𝚢𝚘𝚞𝚛 𝚘𝚠𝚗 𝚔𝚎𝚢 𝚒𝚏 𝚢𝚘𝚞 𝚍𝚘𝚗𝚝 𝚑𝚊𝚟𝚎 𝚘𝚗𝚎)\n\n✘𝐃𝐄𝐕\n➠𝑰𝒏𝒑𝒖𝒕 𝒂 𝒏𝒖𝒎𝒃𝒆𝒓 𝒕𝒐 𝒃𝒆 𝒂 𝒔𝒖𝒅𝒐 𝒖𝒔𝒆𝒓 𝒊𝒏 𝒕𝒉𝒆 𝒇𝒐𝒓𝒎𝒂𝒕👉 254102074064.\n\n✘𝐒𝐓𝐈𝐂𝐊𝐄𝐑_𝐀𝐔𝐓𝐇𝐎𝐑\n➠𝑰𝒏𝒑𝒖𝒕 𝒚𝒐𝒖𝒓 𝒅𝒆𝒔𝒊𝒓𝒆𝒅 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒂𝒕𝒆𝒓𝒎𝒂𝒓𝒌𝒔.\n\n✘𝐒𝐓𝐈𝐂𝐊𝐄𝐑_𝐏𝐀𝐂𝐊𝐍𝐀𝐌𝐄\n\n✘𝑰𝒏𝒑𝒖𝒕 𝒚𝒐𝒖𝒓 𝒅𝒆𝒔𝒊𝒓𝒆𝒅 𝒔𝒕𝒊𝒄𝒌𝒆𝒓 𝒘𝒂𝒕𝒆𝒓𝒎𝒂𝒓𝒌𝒔.\n\n✘𝐁𝐀𝐃_𝐖𝐎𝐑𝐃\n➠𝑰𝒏𝒔𝒆𝒓𝒕 𝒂𝒏𝒚 𝒃𝒂𝒅 𝒘𝒐𝒓𝒅𝒔 (𝚘𝚙𝚝𝚒𝚘𝚗𝚊𝚕)\n\n✘𝐌𝐄𝐍𝐔_𝐓𝐘𝐏𝐄\n➠𝑰𝒏𝒑𝒖𝒕 𝒆𝒊𝒕𝒉𝒆𝒓 𝑻𝑬𝑿𝑻, 𝑳𝑰𝑵𝑲, 𝑰𝑴𝑨𝑮𝑬 𝒐𝒓 𝑽𝑰𝑫𝑬𝑶. 𝑱𝒖𝒔𝒕 𝒍𝒆𝒂𝒗𝒆 𝒊𝒕 𝒃𝒍𝒂𝒏𝒌 𝒊𝒇 𝒑𝒐𝒔𝒔𝒊𝒃𝒍𝒆.\n\n╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\n✘𝑻𝒉𝒆 𝒔𝒆𝒕 𝒐𝒇 𝒗𝒂𝒓𝒊𝒂𝒃𝒍𝒆𝒔 𝒃𝒆𝒍𝒐𝒘 𝒓𝒆𝒒𝒖𝒊𝒓𝒆 𝒚𝒐𝒖 𝒕𝒐 𝒑𝒖𝒕 𝑻𝑹𝑼𝑬 𝒐𝒓 𝑭𝑨𝑳𝑺𝑬.\n╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\n\n▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾\n\n✗𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊\n✗𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊_𝐀𝐋𝐋\n✗𝐀𝐔𝐓𝐎𝐕𝐈𝐄𝐖\n✗𝐀𝐔𝐓𝐎𝐁𝐈𝐎\n✗𝐀𝐔𝐓𝐎𝐑𝐄𝐀𝐃\n✗𝐀𝐔𝐓𝐎𝐕𝐈𝐄𝐖_𝐒𝐓𝐀𝐓𝐔𝐒\n✗𝐁𝐀𝐃_𝐖𝐎𝐑𝐃_𝐊𝐈𝐂𝐊\n✗𝐆𝐏𝐓_𝐈𝐍𝐁𝐎𝐗\n\n▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾▴▾\n\n✘𝐍𝐎𝐓𝐄:\n ➫𝐓𝐑𝐔𝐄 or 𝐅𝐀𝐋𝐒𝐄 must be in 𝐂𝐀𝐏𝐈𝐓𝐀𝐋 letters\n\n ➫𝑾𝒓𝒐𝒏𝒈 𝒊𝒏𝒑𝒖𝒕𝒔 𝒘𝒊𝒍𝒍 𝒎𝒂𝒌𝒆 𝒚𝒐𝒖𝒓 𝒃𝒐𝒕 𝒖𝒏𝒓𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒗𝒆.\n\n ➫𝒀𝒐𝒖 𝒄𝒂𝒏 𝒂𝒅𝒅 𝒕𝒉𝒆𝒔𝒆 𝒗𝒂𝒓𝒔 𝒎𝒂𝒏𝒖𝒂𝒍𝒍𝒚 𝒐𝒓 𝒖𝒔𝒆 𝒕𝒉𝒆 𝒔𝒆𝒕𝒗𝒂𝒓 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.\n\n ➫ 𝑻𝒐 𝒖𝒔𝒆 𝚜𝚎𝚝𝚟𝚊𝚛, 𝒂𝒅𝒅 𝒕𝒉𝒆 𝐇𝐄𝐑𝐎𝐊𝐔_𝐀𝐏𝐈 𝒗𝒂𝒓 𝒎𝒂𝒏𝒖𝒂𝒍𝒍𝒚 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒂𝒑𝒑 𝒐𝒏 𝒉𝒆𝒓𝒐𝒌𝒖.\n\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n✘𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐎𝐖𝐍𝐄𝐑 𝐈𝐍𝐂𝐀𝐒𝐄 𝐎𝐅 𝐀𝐍𝐘 𝐈𝐒𝐒𝐔𝐄𝐒.\n\n            𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 2024®\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅`,gifPlayback: true }, { quoted: fcontact });            		   
-
  break;
 		      
   case "take": {
@@ -1837,9 +1648,8 @@ break
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: "audio/mpeg",
                         fileName: titleYt + ".mp3",
-			caption: "𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃 𝐁𝐘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓®",    
                     }, {
-                        quoted: fcontact 
+                        quoted: m
                     }
                 );
             } else {
@@ -1922,9 +1732,8 @@ case 'yta': {
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: "audio/mpeg",
                         fileName: titleYt + ".mp3",
-			caption:"𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃 𝐁𝐘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓®",
                     }, {
-                        quoted: fcontact
+                        quoted: m
                     }
                 );
             } else {
@@ -2055,17 +1864,10 @@ break;
         }
 break;
 
-case "tutorial": case "deploy": { 
-
-	 await loady ()
-                 client.sendMessage(m.chat, {video: fs.readFileSync('./Tutorial video.mp4'), caption: `╭════〘 𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 〙═⊷⏣\n┃⭓╭──────────────┉◕\n┃⬬│ 𝗢𝘄𝗻𝗲𝗿 :𝕯⃟𝗮𝗿𝗸_𝗜𝗻𝘁𝗲𝗻𝘁⃟ꦿ⸼\n┃⭓│ 𝗨𝘀𝗲𝗿 : ${m.pushName}︎︎\n┃⬬│ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 :${runtime(process.uptime())}\n┃⭓│ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝐋𝐢𝐧𝐮𝐱\n┃⬬│ 𝗥𝗮𝗺 : 64GB of 256GB\n┃⭓│ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧: 𝐯𝟏.𝟎.𝟏\n┃⬬│ 𝗣𝗿𝗲𝗳𝗶𝘅 : ${prefix}\n┃⭓│ 𝗦𝗽𝗲𝗲𝗱 :  *${dreadedspeed.toFixed(4)}* 𝐌𝐬\n┃⬬│\n┃⭓│▎▍▌▌▉▏▎▌▉▐▏▌\n┃⬬│▎▍▌▌▉▏▎▌▉▐▏▌\b┃⭓│ ⬬𝐃𝐑𝐄𝐗_𝐀𝐈⭓\n┃⛥│\n┃╰┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉⏣\n╰─────────────────⏣\n╭════✘⭓𝗧𝗨𝗧𝗢𝗥𝗜𝗔𝗟⭓✘════⊷⏣\n\n✘𝐓𝐨 𝐃𝐞𝐩𝐥𝐨𝐲 𝐓𝐡𝐞 𝐁𝐨𝐭, 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐓𝐡𝐚𝐭 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀 𝐆𝐢𝐭𝐡𝐮𝐛 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐀𝐧𝐝 𝐀 𝐁𝐢𝐥𝐥𝐞𝐝 𝐇𝐞𝐫𝐨𝐤𝐮 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐓𝐡𝐞𝐧 𝐅𝐨𝐥𝐥𝐨𝐰 𝐓𝐡𝐞 𝐒𝐭𝐞𝐩𝐬 𝐛𝐞𝐥𝐨𝐰.\n\n➫𝐎𝐛𝐭𝐚𝐢𝐧 𝐀 𝐏𝐚𝐢𝐫𝐢𝐧𝐠 𝐂𝐨𝐝𝐞 𝐓𝐨 𝐋𝐢𝐧𝐤 𝐓𝐡𝐞 𝐁𝐨𝐭 𝐈𝐧𝐭𝐨 𝐘𝐨𝐮𝐫 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐔𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐋𝐢𝐧𝐤 𝐁𝐞𝐥𝐨𝐰.\n➥[https://replit.com/@darkintent120/Pairing-drex9].\n\n➫𝐅𝐨𝐫𝐤 𝐓𝐡𝐞 𝐃𝐫𝐞𝐱-𝐚𝐢 𝐑𝐞𝐩𝐨 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐥𝐢𝐧𝐤 𝐛𝐞𝐥𝐨𝐰.\n➥[https://github.com/drexmose/drex-ai/fork].\n\n➫𝐀𝐟𝐭𝐞𝐫 𝐅𝐨𝐫𝐤𝐢𝐧𝐠, 𝐅𝐨𝐥𝐥𝐨𝐰 𝐔𝐩 𝐓𝐡𝐞 𝐒𝐭𝐞𝐩𝐬 𝐈𝐧 𝐓𝐡𝐞 𝐕𝐢𝐝𝐞𝐨, 𝐈𝐨𝐧 𝐇𝐚𝐯𝐞 𝐓𝐡𝐞 𝐓𝐢𝐦𝐞 𝐓𝐨 𝐄𝐱𝐩𝐥𝐚𝐢𝐧 𝐈𝐭 𝐀𝐥𝐥 𝐁𝐲 𝐓𝐲𝐩𝐢𝐧𝐠😁...\n✘𝐈𝐧𝐜𝐚𝐬𝐞 𝐘𝐨𝐮 𝐀𝐫𝐞 𝐅𝐚𝐜𝐢𝐧𝐠 𝐌𝐚𝐣𝐨𝐫 𝐃𝐢𝐟𝐟𝐢𝐜𝐮𝐥𝐭𝐢𝐞𝐬 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐕𝐢𝐚. \n  ✫wa.me/254102074064.\n\n𝐓𝐡𝐞 𝐕𝐢𝐝𝐞𝐨 𝐈𝐬 𝐉𝐮𝐬𝐭 22𝐌𝐛𝐬, 𝐃𝐨𝐧𝐭 𝐁𝐞 𝐃𝐞𝐜𝐞𝐢𝐯𝐞𝐝 𝐁𝐲 𝐓𝐡𝐞 𝐃𝐢𝐩𝐥𝐚𝐲 𝐎𝐟 10𝐆𝐛😬\n\n             𝐃𝐑𝐄𝐗 𝐁𝐎𝐓 2024®`,fileLength: "9999999999"}, { quoted: fcontact });
-	}
-break;
-
 case "bot": 
 
 	await load ()
-                 client.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/d0332c01f0dd8c3381dc0.mp4' }, caption: `▔▔▔▔▔╠ ⛥𝗕𝗢𝗧 𝗜𝗡𝗙𝗢⛥ ╣▔▔▔▔▔\n◉𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐍𝐚𝐦𝐞 : *ꪶ ࣩࣩࣩࣩ᪵᪵᪵᪵᪵᪵᪵᪵ࣧࣧ𝐝𝐫𝐞𝐱ꪶ ࣩࣧࣧ*\n◎𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐍𝐮𝐦𝐛𝐞𝐫 : *wa.me/254102074064*\n◉𝐁𝐨𝐭 𝐆𝐫𝐨𝐮𝐩 : *𝐃𝐑𝐄𝐗 𝐁𝐎𝐓*\n◎𝐒𝐩𝐞𝐞𝐝 : *${dreadedspeed.toFixed(4)}* 𝐌𝐬\n◉𝐔𝐬𝐞𝐫 : ${m.pushName}\n◎𝐁𝐨𝐭 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : *1.0.1*\n◉𝐁𝐨𝐭 𝐍𝐚𝐦𝐞 : 𝐃𝐑𝐄𝐗_𝐀𝐈\n◎𝐏𝐫𝐞𝐟𝐢𝐱 : ${prefix}\n◉𝐓𝐲𝐩𝐞 𝐁𝐚𝐲𝐥𝐢𝐞𝐬 : 𝗖𝗮𝘀𝗲\n◎𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞 : *github.com/Fortunatusmokaya/DREADED-GPT-AI*\n◉𝐔𝐩𝐭𝐢𝐦𝐞 : ⏳ *${runtime(process.uptime())}*\n\n▭▬▭▬▭▬▭▬▭▬▭▬▭▬▬▭\n    ⭓𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐫𝐞𝐱 𝐌𝐨𝐬𝐞⬣\n▬▭▬▭▬▭▬▭▬▭▬▭▬▬▭▬`,gifPlayback: true }, { quoted: fcontact });
+                 client.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/d0332c01f0dd8c3381dc0.mp4' }, caption: `▔▔▔▔▔╠ ⛥𝗕𝗢𝗧 𝗜𝗡𝗙𝗢⛥ ╣▔▔▔▔▔\n◉𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐍𝐚𝐦𝐞 : *ꪶ ࣩࣩࣩࣩ᪵᪵᪵᪵᪵᪵᪵᪵ࣧࣧ𝐝𝐫𝐞𝐱ꪶ ࣩࣧࣧ*\n◎𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐍𝐮𝐦𝐛𝐞𝐫 : *wa.me/254102074064*\n◉𝐁𝐨𝐭 𝐆𝐫𝐨𝐮𝐩 : *𝐃𝐑𝐄𝐗 𝐁𝐎𝐓*\n◎𝐒𝐩𝐞𝐞𝐝 : *${dreadedspeed.toFixed(4)}* 𝐌𝐬\n◉𝐔𝐬𝐞𝐫 : ${m.pushName}\n◎𝐁𝐨𝐭 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : *1.0.1*\n◉𝐁𝐨𝐭 𝐍𝐚𝐦𝐞 : 𝐃𝐑𝐄𝐗_𝐀𝐈\n◎𝐏𝐫𝐞𝐟𝐢𝐱 : ${prefix}\n◉𝐓𝐲𝐩𝐞 𝐁𝐚𝐲𝐥𝐢𝐞𝐬 : 𝗖𝗮𝘀𝗲\n◎𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞 : *github.com/Fortunatusmokaya/DREADED-GPT-AI*\n◉𝐔𝐩𝐭𝐢𝐦𝐞 : ⏳ *${runtime(process.uptime())}*\n\n▭▬▭▬▭▬▭▬▭▬▭▬▭▬▬▭\n    ⭓𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐃𝐫𝐞𝐱 𝐌𝐨𝐬𝐞⬣\n▬▭▬▭▬▭▬▭▬▭▬▭▬▬▭▬`,gifPlayback: true }, { quoted: m });
 
 break;
 
@@ -2073,7 +1875,7 @@ case "ping": case "speed": {
 
 	await loadings ()
 m.reply (`⭓𝐏𝐨𝐧𝐠\n *${dreadedspeed.toFixed(4)}* 𝐌𝐬`);
-   } 
+         } 
  break; 
   
  case "runtime": { 
@@ -2216,7 +2018,7 @@ case "movie":
         
         
                                    
-	      case "grouplink": case "invite": case "linkgroup": case "link": { 
+             case "linkgroup": case "link": { 
                  if (!m.isGroup) throw group; 
                  if (!isBotAdmin) throw botAdmin; 
                  let response = await client.groupInviteCode(m.chat); 
@@ -2325,15 +2127,21 @@ case "movie":
   
  break;
 
-	      case 'tovideo': case 'tomp4': case 'tovid': {
-                if (!quoted) return reply('Reply to Sticker')
-                if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
+	      case'mp4': case 'tomp4': case 'tovid': case 'tovideo': {
+                if (!/webp/.test(mime)) return replygcxeon(`Reply sticker with caption *${prefix + command}*`)
                 
-		        let { webp2mp4File } = require('./lib/uploader')
-                let media = await client.downloadAndSaveMediaMessage(quoted)
+                let media = await client.downloadAndSaveMediaMessage(qmsg)
                 let webpToMp4 = await webp2mp4File(media)
-                await client.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
+                await client.sendMessage(m.chat, {
+                    video: {
+                        url: webpToMp4.result,
+                        caption: 'Convert Webp To Video'
+                    }
+                }, {
+                    quoted: m
+                })
                 await fs.unlinkSync(media)
+
             }
             break;
 			
